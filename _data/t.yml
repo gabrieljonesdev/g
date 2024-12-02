@@ -27,21 +27,5 @@ social-links:
       name: "medium"
       url: "https://medium.com/gjdev/"
 
-## Labels
-italian-version:
-  en: "Italian version"
-  it: "Versione italiana"
-cookie-policy-info:
-  it: "Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie."
-cookie-policy-accept-btn:
-  it: "Accetto"
-footer-links:
-  it:
-    privacy-policy:
-      name: "Privacy policy"
-      url: "/it/privacy-policy"
-    cookie-policy:
-      name: "Cookie Policy"
-      url: "/it/cookie-policy"
 
 
