@@ -12,8 +12,9 @@
 <section id="head-section">
   <h2 class="visually-hidden">Contenuti in evidenza</h2>
   <div class="container">
+    <div class="row">
       <div class="col-lg-6 order-2 order-lg-1">
-        <div class="card mb-5" id="latest-post-card">
+        <div class="card mb-5">
           <div class="card-body pb-5 px-0">
             <div class="category-top">
               <svg class="icon icon-sm" aria-hidden="true">
@@ -38,9 +39,11 @@
           </div>
         </div>
       </div>
+      <!-- Immagine affiancata al testo -->
       <div class="col-lg-6 order-1 order-lg-2 px-0 px-lg-3">
         <img src="https://picsum.photos/800/600" title="titolo immagine" alt="descrizione immagine" class="img-fluid">
       </div>
+    </div>
   </div>
 </section>
 
@@ -67,7 +70,6 @@
     })
     .catch(error => console.error('Error fetching RSS feed:', error));
 </script>
-        </section>
         <section id="calendario">
           <div class="section section-muted pb-90 pb-lg-50 px-lg-5 pt-0">
             <div class="container">
