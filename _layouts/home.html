@@ -16,46 +16,67 @@
 <div class="container">
           <div class="col-lg-6 order-1 order-lg-2 px-0 px-lg-3">
   <div class="row">
-    <div class="col-lg-6 order-2 order-lg-1">
-      <div class="card mb-5">
-
+<section id="head-section">
+  <h2 class="visually-hidden">Contenuti in evidenza</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="card mb-5" id="latest-post-card">
+          <div class="card-body pb-5 px-0">
+            <div class="category-top">
+              <svg class="icon icon-sm" aria-hidden="true">
+                <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-calendar"></use>
+              </svg>
+              <span class="title-xsmall-semi-bold fw-semibold">Notizie</span>
+              <span class="data fw-normal" id="post-date">Caricamento...</span>
+            </div>
+            <a href="#" class="text-decoration-none" id="post-link">
+              <h3 class="card-title" id="post-title">Caricamento...</h3>
+            </a>
+            <p class="mb-4 pt-3 lora" id="post-description">Caricamento...</p>
+            <a class="chip chip-simple" href="#" id="post-category">
+              <span class="chip-label">Caricamento...</span>
+            </a>
+            <a class="read-more pb-3" href="#" id="read-more-btn">
+              <span class="text">Tutte le novità</span>
+              <svg class="icon">
+                <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 px-0 px-lg-3">
+        <img src="https://picsum.photos/800/600" title="titolo immagine" alt="descrizione immagine" class="img-fluid">
       </div>
     </div>
-<div class="card-body pb-5 px-0">
-  <div class="category-top">
-    <svg class="icon icon-sm" aria-hidden="true">
-      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-calendar"></use>
-    </svg>
-    <span class="title-xsmall-semi-bold fw-semibold">Notizie</span>
-    <span class="data fw-normal">
-      <!-- Data dell'ultimo post -->
-      {{ site.posts.first.date | date: "%-d %B %Y" }}
-    </span>
   </div>
-  <a href="https://blog.gjdev.it{{ site.posts.first.url }}" class="text-decoration-none">
-    <h3 class="card-title">
-      <!-- Titolo dell'ultimo post -->
-      {{ site.posts.first.title }}
-    </h3>
-  </a>
-  <p class="mb-4 pt-3 lora">
-    <!-- Estratto dell'ultimo post -->
-    <strong>{{ site.posts.first.excerpt | strip_html }}</strong>
-  </p>
-  <a class="chip chip-simple" href="#">
-    <span class="chip-label">
-      <!-- Categoria dell'ultimo post -->
-      {{ site.posts.first.categories.first }}
-    </span>
-  </a>
-  <a class="read-more pb-3" href="https://blog.gjdev.it{{ site.posts.first.url }}">
-    <span class="text">Tutte le novità</span>
-    <svg class="icon">
-      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
-    </svg>
-  </a>
-</div>
+</section>
 
+<script>
+  fetch('https://blog.gjdev.it/feed.xml')
+    .then(response => response.text())
+    .then(str => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(str, 'text/xml');
+      const latestPost = xmlDoc.querySelector('item');
+      
+      const title = latestPost.querySelector('title').textContent;
+      const link = latestPost.querySelector('link').textContent;
+      const description = latestPost.querySelector('description').textContent;
+      const pubDate = new Date(latestPost.querySelector('pubDate').textContent).toLocaleDateString();
+      const category = 'Notizie';  // Puoi aggiungere un'estrazione di categoria, se disponibile.
+
+      document.getElementById('post-title').textContent = title;
+      document.getElementById('post-link').setAttribute('href', link);
+      document.getElementById('post-description').textContent = description;
+      document.getElementById('post-date').textContent = pubDate;
+      document.getElementById('post-category').textContent = category;
+      document.getElementById('read-more-btn').setAttribute('href', link);
+    })
+    .catch(error => console.error('Error fetching RSS feed:', error));
+</script>
+   
   </div>
 </div>
 </div>
