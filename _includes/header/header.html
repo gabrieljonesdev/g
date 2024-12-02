@@ -13,27 +13,6 @@
                       <div class="it-header-slim-wrapper-content">
                         <a class="d-lg-block navbar-brand" target="_blank" href="#" aria-label="Vai al portale {Nome della Regione} - link esterno - apertura nuova scheda" title="Vai al portale {Nome della Regione}">Nome della Regione</a>
                         <div class="it-header-slim-right-zone" role="navigation">
-                          <div class="nav-item dropdown">
-                            <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="languages" aria-haspopup="true">
-                              <span class="visually-hidden">Lingua attiva:</span>
-                              <span>ITA</span>
-                              <svg class="icon">
-                                <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
-                              </svg>
-                            </button>
-                            <div class="dropdown-menu">
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="link-list-wrapper">
-                                    <ul class="link-list">
-                                      <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
-                                      <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <a class="btn btn-primary btn-icon btn-full" href="../servizi/accesso-servizio.html" data-element="personal-area-login">
                             <span class="rounded-icon" aria-hidden="true">
                               <svg class="icon icon-primary">
@@ -61,67 +40,10 @@
                                   <image xlink:href="../assets/images/logo-comune.svg"/>
                                 </svg>
                                 <div class="it-brand-text">
-                                  <div class="it-brand-title">Il mio Comune</div>
-                                  <div class="it-brand-tagline d-none d-md-block">Un comune da vivere </div>
+                                  <div class="it-brand-title">{{ page.title | default: site.title }}</div>
+                                  <div class="it-brand-tagline d-none d-md-block">{{ page.description | default: site.description }}</div>
                                 </div>
                               </a>
-                          </div>
-                          <div class="it-right-zone">
-                            <div class="it-socials d-none d-lg-flex">
-                              <span>Seguici su</span>
-                              <ul>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
-                                    </svg>
-                                    <span class="visually-hidden">Twitter</span></a>
-                                </li>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
-                                    </svg>
-                                    <span class="visually-hidden">Facebook</span></a>
-                                </li>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
-                                    </svg>
-                                    <span class="visually-hidden">YouTube</span></a>
-                                </li>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
-                                    </svg>
-                                    <span class="visually-hidden">Telegram</span></a>
-                                </li>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
-                                    </svg>
-                                    <span class="visually-hidden">Whatsapp</span></a>
-                                </li>
-                                <li>
-                                  <a href="#" target="_blank">
-                                    <svg class="icon icon-sm icon-white align-top">
-                                      <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
-                                    </svg>
-                                    <span class="visually-hidden">RSS</span></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="it-search-wrapper">
-                              <span class="d-none d-md-block">Cerca</span>
-                              <button class="search-link rounded-icon" type="button" data-bs-toggle="modal" data-bs-target="#search-modal" aria-label="Cerca nel sito">
-                                <svg class="icon">
-                                  <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-search"></use>
-                                </svg>
-                              </button>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -155,29 +77,29 @@
                                   <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-pa"></use>
                                 </svg>
                                 <div class="it-brand-text">
-                                  <div class="it-brand-title">Nome del Comune</div>
+                                  <div class="it-brand-title">GJD</div>
                                 </div>
                               </a>
                               <nav aria-label="Principale">
                                 <ul class="navbar-nav" data-element="main-navigation">
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/amministrazione.html" data-element="management">
-                                      <span>Amministrazione</span>
+                                    <a class="nav-link" href="/progetti/" data-element="management">
+                                      <span>Progetti</span>
                                     </a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/novita.html" data-element="news">
+                                    <a class="nav-link" href="/blog/" data-element="news">
                                       <span>Novità</span>
                                     </a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/servizi.html" data-element="all-services">
+                                    <a class="nav-link" href="/servizi/" data-element="all-services">
                                       <span>Servizi</span>
                                     </a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/eventi.html" data-element="live">
-                                      <span>Vivere il Comune</span>
+                                    <a class="nav-link" href="/risorse/" data-element="live">
+                                      <span>Risorse</span>
                                     </a>
                                   </li>
                                 </ul>
@@ -185,17 +107,17 @@
                               <nav aria-label="Secondaria">
                                 <ul class="navbar-nav navbar-secondary">
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/argomento.html">Iscrizioni</a>
+                                    <a class="nav-link" href="/siti-tematici/">Siti tematici</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/argomento.html">Estate in città</a>
+                                    <a class="nav-link" href="/progetti/arena-giovani/">Progetto Arena Giovani</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="../sito/argomento.html">Polizia locale</a>
+                                    <a class="nav-link" href="/ud/">Ufficio Digitale GJD</a>
                                   </li>
                                   <li class="nav-item">
-                                    <a class="nav-link" href="argomenti.html" data-element="all-topics">
-                                      <span>Tutti gli argomenti 
+                                    <a class="nav-link" href="/aree-tematiche/" data-element="all-topics">
+                                      <span>Aree tematiche
                                         <svg class="icon icon-sm">
                                           <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-chevron-right"></use>
                                         </svg>
@@ -204,53 +126,6 @@
                                   </li>
                                 </ul>
                               </nav>
-                              <div class="it-socials">
-                                <span>Seguici su</span>
-                                <ul>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
-                                      </svg>
-                                      <span class="visually-hidden">Twitter</span></a>
-                                  </li>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
-                                      </svg>
-                                      <span class="visually-hidden">Facebook</span></a>
-                                  </li>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
-                                      </svg>
-                                      <span class="visually-hidden">YouTube</span></a>
-                                  </li>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
-                                      </svg>
-                                      <span class="visually-hidden">Telegram</span></a>
-                                  </li>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-whatsapp"></use>
-                                      </svg>
-                                      <span class="visually-hidden">Whatsapp</span></a>
-                                  </li>
-                                  <li>
-                                    <a href="#" target="_blank">
-                                      <svg class="icon icon-sm icon-white align-top">
-                                        <use xlink:href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-rss"></use>
-                                      </svg>
-                                      <span class="visually-hidden">RSS</span></a>
-                                  </li>
-                                </ul>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -259,4 +134,5 @@
                   </div>
                 </div>
               </div>
-            </header></div>
+            </header>
+          </div>
