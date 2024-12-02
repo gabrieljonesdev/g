@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Homepage di esempio
-description: Questo è un esempio di homepage con utilizzo del componente "hero"
+title: Gabriel Jones
+description: Hey! Scopri il mio mondo infinito!
 lang: it
 ref: homepage
 permalink: /
